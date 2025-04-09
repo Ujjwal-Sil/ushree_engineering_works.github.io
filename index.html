@@ -2,70 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ushree Engineering Works</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
 
   <!-- Header -->
-  <header class="bg-gray-900 text-white p-6 text-center">
-    <h1 class="text-4xl font-bold">Ushree Engineering Works</h1>
-    <p class="text-lg mt-2">Iron Gates • SS Railings • Steel Almirahs • Sliding Doors</p>
+  <header class="bg-gray-900 text-white p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Ushree Engineering Works</h1>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:justify-center space-y-2 md:space-y-0 md:space-x-6 text-center mt-4 md:mt-0">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#products" class="hover:underline">Products</a>
+      <a href="#gallery" class="hover:underline">Gallery</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
   </header>
 
   <!-- About Section -->
-  <section class="py-10 px-4 text-center max-w-3xl mx-auto">
+  <section id="about" class="py-10 px-4 text-center max-w-3xl mx-auto">
     <h2 class="text-2xl font-semibold mb-4">About Us</h2>
     <p>We are a trusted name in metalworks, specializing in high-quality fabrication of Iron Gates, Stainless Steel Railings, Steel Almirahs, and Sliding Doors. From residential to household needs, we deliver durability, design, and reliability.</p>
   </section>
 
-  <!-- Product/Service Sections -->
-  <section class="bg-gray-100 py-10 px-4">
+  <!-- Products Section -->
+  <section id="products" class="bg-gray-100 py-10 px-4">
     <h2 class="text-2xl font-semibold text-center mb-8">Our Products</h2>
-    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
       <div class="bg-white p-6 shadow-md rounded-lg">
         <h3 class="text-xl font-bold mb-2">Iron Gates</h3>
-        <p>Elegant and secure iron gates for homes, villas, and factories. Custom designs, rust-resistant finishes, and heavy-duty hinges for long-lasting performance.</p>
+        <p>Elegant and secure iron gates for homes, office, and commercial purposes. Custom designs, rust-resistant finishes, and heavy-duty hinges for long-lasting performance.</p>
       </div>
-
       <div class="bg-white p-6 shadow-md rounded-lg">
         <h3 class="text-xl font-bold mb-2">Stainless Steel Railings</h3>
         <p>Premium-grade SS railings for balconies, stairs, and terraces. Sleek modern finishes with tough build quality and precision welding.</p>
       </div>
-
       <div class="bg-white p-6 shadow-md rounded-lg">
         <h3 class="text-xl font-bold mb-2">Steel Almirahs</h3>
-        <p>Durable steel almirahs for home, office, and industrial use. Available in multiple sizes, colors, and lock mechanisms for total utility and security.</p>
+        <p>Durable steel almirahs for home, office, and residential use. Available in multiple sizes, colors, and lock mechanisms for total utility and security.</p>
       </div>
-
       <div class="bg-white p-6 shadow-md rounded-lg">
         <h3 class="text-xl font-bold mb-2">Sliding Doors</h3>
         <p>Stylish and space-saving sliding doors made from robust metal frames. Smooth operation, corrosion-resistant tracks, and aesthetic appeal.</p>
       </div>
-
     </div>
   </section>
 
   <!-- Gallery Section -->
-  <section class="py-10 px-4">
+  <section id="gallery" class="py-10 px-4">
     <h2 class="text-2xl font-semibold text-center mb-6">Gallery</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-      <!-- Replace with real image paths -->
-      <img src="gate1.jpg" alt="Iron Gate" class="w-full h-48 object-cover rounded-lg shadow" />
-      <img src="railing.jpg" alt="Stainless Steel Railing" class="w-full h-48 object-cover rounded-lg shadow" />
-      <img src="almirah.jpeg" alt="Steel Almirah" class="w-full h-48 object-cover rounded-lg shadow" />
-      <img src="sliding-door.jpeg" alt="Sliding Door" class="w-full h-48 object-cover rounded-lg shadow" />
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <img src="gate1.jpg" alt="Iron Gate" class="gallery-img w-full h-48 object-cover rounded-lg shadow cursor-pointer" />
+      <img src="railing.jpg" alt="Stainless Steel Railing" class="gallery-img w-full h-48 object-cover rounded-lg shadow cursor-pointer" />
+      <img src="almirah.jpeg" alt="Steel Almirah" class="gallery-img w-full h-48 object-cover rounded-lg shadow cursor-pointer" />
+      <img src="sliding-door.jpg" alt="Sliding Door" class="gallery-img w-full h-48 object-cover rounded-lg shadow cursor-pointer" />
     </div>
   </section>
 
   <!-- Inquiry Form -->
-  <section class="bg-gray-100 py-10 px-4">
+  <section id="contact" class="bg-gray-100 py-10 px-4">
     <h2 class="text-2xl font-semibold text-center mb-6">Send Us an Inquiry</h2>
     <form action="https://formsubmit.co/ujjwals266@gmail.com" method="POST" class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md space-y-4">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://ushreeengineering.github.io/thankyou.html">
+      <input type="hidden" name="_next" value="https://Ujjwal-Sil.github.io/thankyou.html">
       <input type="text" name="_honey" style="display:none">
 
       <input type="text" name="Name" placeholder="Your Name" required class="w-full border p-3 rounded" />
@@ -76,12 +83,52 @@
     </form>
   </section>
 
-  <!-- Contact -->
+  <!-- Footer -->
   <footer class="bg-gray-900 text-white text-center py-6 mt-10">
-    <p class="mb-1">📞 +91-8617563409 | ✉️ ujjwals266@gmail.com</p>
+    <p class="mb-1">📞+91-8617563409 | ✉️ ujjwals266@gmail.com</p>
     <p>📍 Nasra Amtala, Ranaghat, West Bengal</p>
     <p class="mt-2 text-sm">&copy; 2025 Ushree Engineering Works</p>
   </footer>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+918617563409" class="fixed bottom-5 right-5 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full shadow-lg text-sm md:text-base z-50">
+    📞 Call Now
+  </a>
+
+  <!-- Image Viewer Modal -->
+  <div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+    <span id="close-modal" class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span>
+    <img id="modal-img" src="" alt="Full Image" class="max-w-full max-h-full rounded-lg shadow-xl">
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeModal = document.getElementById("close-modal");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modalImg.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.add("hidden");
+    });
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
 </body>
 </html>
